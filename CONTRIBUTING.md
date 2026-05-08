@@ -141,18 +141,6 @@ fix stuff
 
 ---
 
-## 🏆 Penilaian Top 3
-
-Kontribusi peserta akan dinilai berdasarkan:
-
-1. **Jumlah PR yang berhasil di-merge** (bukan sekedar dibuat)
-2. **Kualitas perubahan** — apakah fitur/style yang ditambahkan benar-benar bermanfaat dan berfungsi dengan baik
-3. **Konsistensi** — aktif berkontribusi secara merata selama program berlangsung, bukan hanya di akhir
-
-> 💡 Lebih baik 3 PR berkualitas daripada 20 PR berisi perubahan sepele!
-
----
-
 ## ❓ Pertanyaan & Bantuan
 
 Jika kamu mengalami kesulitan atau ada yang ingin didiskusikan:
