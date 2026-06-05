@@ -1,215 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechBlog MI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-
-    /* ============================================
-       VARIABEL WARNA & FONT
-       Ubah di sini untuk ganti tema keseluruhan!
-    ============================================ */
-    :root {
-      --bg          : #f7f5f0;
-      --text        : #1a1a1a;
-      --text-muted  : #888;
-      --accent      : #2a5cff;
-      --border      : #e0ddd8;
-      --font-heading: 'Syne', sans-serif;
-      --font-mono   : 'Space Mono', monospace;
-    }
-
-    /* ============================================
-       RESET & BASE
-    ============================================ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font-mono);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    /* ============================================
-       NAVBAR
-    ============================================ */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 99;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      padding: 1.2rem 5vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: -0.02em;
-    }
-
-    .nav-logo span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--accent); }
-
-    /* ============================================
-       HERO SECTION
-    ============================================ */
-    #hero {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 6rem 5vw;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      max-width: 700px;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-title span { color: var(--accent); }
-
-    .hero-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 480px;
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      padding: 0.75rem 1.8rem;
-      background: var(--text);
-      color: var(--bg);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid var(--text);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .hero-btn:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    /* ============================================
-       AREA KONTEN — KOSONG UNTUK DIKEMBANGKAN
-       Tambahkan style section baru di sini!
-    ============================================ */
-
-    /* ============================================
-       FOOTER
-    ============================================ */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 5vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-logo {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    .footer-logo span { color: var(--accent); }
-
-    .footer-copy {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-    }
-
-    /* ============================================
-       RESPONSIVE — MOBILE
-    ============================================ */
-    @media (max-width: 600px) {
-      .nav-links { display: none; } /* TODO: tambahkan hamburger menu! */
-      footer { flex-direction: column; text-align: center; }
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- ============================================
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechBlog MI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ============================================
        NAVBAR
   ============================================ -->
-  <nav>
-    <a href="#" class="nav-logo">Tech<span>Blog</span></a>
-    <ul class="nav-links">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Artikel</a></li>
-      <li><a href="#">Kategori</a></li>
-      <li><a href="#">Tentang</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <a href="#" class="nav-logo">Tech<span>Blog</span></a>
+      <ul class="nav-links">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Artikel</a></li>
+        <li><a href="#">Kategori</a></li>
+        <li><a href="#">Tentang</a></li>
+      </ul>
+    </nav>
 
-  <!-- ============================================
+    <!-- ============================================
        HERO SECTION
   ============================================ -->
-  <section id="hero">
-    <p class="hero-tag">Blog Teknologi & Informatika</p>
-    <h1 class="hero-title">
-      Belajar,<br>
-      Berbagi, &<br>
-      <span>Berkembang.</span>
-    </h1>
-    <p class="hero-desc">
-      Selamat datang di TechBlog MI — ruang bagi mahasiswa Manajemen Informatika
-      untuk berbagi artikel, tips, dan wawasan seputar dunia teknologi.
-    </p>
-    <a href="#" class="hero-btn">Mulai Membaca →</a>
-  </section>
+    <section id="hero">
+      <p class="hero-tag">Blog Teknologi & Informatika</p>
+      <h1 class="hero-title">
+        Belajar,<br />
+        Berbagi, &<br />
+        <span>Berkembang.</span>
+      </h1>
+      <p class="hero-desc">Selamat datang di TechBlog MI — ruang bagi mahasiswa Manajemen Informatika untuk berbagi artikel, tips, dan wawasan seputar dunia teknologi.</p>
+      <a href="#" class="hero-btn">Mulai Membaca →</a>
+    </section>
 
-  <!-- ============================================
+    <!-- ============================================
        AREA PENGEMBANGAN PESERTA
        Tambahkan section baru di sini!
 
@@ -223,15 +50,13 @@
        - Halaman baru (about.html, artikel.html, dll)
   ============================================ -->
 
-
-
-  <!-- ============================================
+    <!-- ============================================
        FOOTER
   ============================================ -->
-  <footer>
-    <div class="footer-logo">Tech<span>Blog</span></div>
-    <div class="footer-copy">© 2026 TechBlog MI · HMPS Manajemen Informatika · Polmed</div>
-  </footer>
-
-</body>
+    <footer>
+      <div class="footer-logo">Tech<span>Blog</span></div>
+      <div class="footer-copy">© 2026 TechBlog MI · HMPS Manajemen Informatika · Polmed</div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
