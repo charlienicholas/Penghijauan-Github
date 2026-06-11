@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang - TechBlog MI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- css vanila -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- css tailwind -->
+    <link rel="stylesheet" href="../tailwind/output.css" />
+  </head>
+  <body class="transition-colors duration-500">
+    <!-- ============================================ -->
+    <!-- NAVBAR -->
+    <!-- ============================================ -->
+    <nav class="dark:bg-slate-900">
+      <a href="../../index.html" class="nav-logo">Tech<span>Blog</span></a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Beranda</a></li>
+        <li><a href="../../index.html#artikel">Artikel</a></li>
+        <li><a href="../../index.html#categories">Kategori</a></li>
+        <li><a href="about.html" class="active">Tentang</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <!-- Toggle Theme -->
+        <button id="theme-btn" class="relative w-12 h-6 rounded-full bg-gray-200 dark:bg-slate-700 transition-colors flex items-center px-1">
+          <div class="dot w-4 h-4 bg-bg dark:bg-indigo-400 rounded-full shadow-sm transform transition-transform dark:translate-x-6 flex items-center justify-center"></div>
+        </button>
+
+        <!-- Hamburger Menu -->
+        <button id="menu-open" class="md:hidden p-2 text-text dark:text-bg transition-colors duration-500">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Bagian side menu -->
+    <div id="side-menu" class="fixed inset-0 z-999 translate-x-full transition-transform duration-300">
+      <div class="absolute flex right-0 w-72 h-full bg-text dark:bg-slate-900 p-6 shadow-2xl rounded-l-2xl">
+        <button id="menu-close" class="absolute top-5 right-5 text-bg hover:text-accent transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <ul class="mt-12 space-y-6 text-base font-semibold text-bg">
+          <li><a href="../../index.html" class="block px-4 py-2.5 rounded hover:text-accent transition-colors" data-section="home">Beranda</a></li>
+          <li><a href="../../index.html#artikel" class="block px-4 py-2.5 rounded hover:text-accent transition-colors" data-section="articles">Artikel</a></li>
+          <li><a href="../../index.html#categories" class="block px-4 py-2.5 rounded hover:text-accent transition-colors" data-section="categories">Kategori</a></li>
+          <li><a href="about.html" class="block px-4 py-2.5 rounded hover:text-accent transition-colors" data-section="about">Tentang</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- TENTANG SECTION -->
+    <!-- ============================================ -->
+    <section id="about" class="px-[5vw] w-full bg-text-muted/20 dark:bg-slate-800 py-24">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-text dark:text-bg transition-colors duration-300 text-4xl md:text-5xl font-bold font-heading text-center">Tentang <span class="text-accent">TechBlog MI</span></h1>
+        <div class="w-16 h-1 bg-accent mt-3 mb-4 rounded-4xl mx-auto"></div>
+        <p class="text-center text-text-muted dark:text-bg/60 text-sm max-w-lg mx-auto mb-14">Bersama menulis, berbagi, dan berkembang dalam satu wadah literasi digital kampus.</p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 mb-14">
+          <div class="text-center bg-bg dark:bg-slate-700 rounded-xl p-5 shadow-sm">
+            <p class="text-3xl font-bold font-heading text-accent">6</p>
+            <p class="text-xs text-text-muted dark:text-bg/60 mt-1">Artikel</p>
+          </div>
+          <div class="text-center bg-bg dark:bg-slate-700 rounded-xl p-5 shadow-sm">
+            <p class="text-3xl font-bold font-heading text-accent">3</p>
+            <p class="text-xs text-text-muted dark:text-bg/60 mt-1">Tim Inti</p>
+          </div>
+          <div class="text-center bg-bg dark:bg-slate-700 rounded-xl p-5 shadow-sm">
+            <p class="text-3xl font-bold font-heading text-accent">1</p>
+            <p class="text-xs text-text-muted dark:text-bg/60 mt-1">Komunitas</p>
+          </div>
+        </div>
+
+        <!-- Deskripsi -->
+        <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 md:p-8 mb-8 shadow-sm">
+          <p class="text-base text-text-muted dark:text-bg/60 leading-relaxed mb-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat et expedita sequi minima quos recusandae reiciendis error nisi quaerat. Veritatis fugiat, incidunt, perspiciatis quae labore quis, ea ut corrupti voluptates mollitia possimus? Animi nam temporibus hic tempora magni obcaecati expedita vero, autem, molestias labore architecto nesciunt ullam totam asperiores saepe!
+          </p>
+          <p class="text-base text-text-muted dark:text-bg/60 leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nam iusto commodi quasi, provident molestiae! Repellendus aliquid illo adipisci asperiores.
+          </p>
+        </div>
+
+        <!-- Visi & Misi + Tim -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h2 class="text-xl font-semibold text-text dark:text-bg font-heading">Visi & Misi</h2>
+            </div>
+            <div class="space-y-4 text-sm text-text-muted dark:text-bg/60">
+              <div class="bg-accent/5 border-l-4 border-accent pl-4 py-2 rounded-r-lg">
+                <p class="font-semibold text-text dark:text-bg">Visi</p>
+                <p class="mt-1">Menjadi Pusat Inovasi Teknologi Berbasis Kampus yang menghasilkan lulusan kompeten dan berjiwa kreatif.</p>
+              </div>
+              <div class="bg-accent/5 border-l-4 border-accent pl-4 py-2 rounded-r-lg">
+                <p class="font-semibold text-text dark:text-bg">Misi</p>
+                <ul class="mt-1 space-y-1 list-disc list-inside">
+                  <li>Platform pembelajaran teknologi yang accessible untuk semua.</li>
+                  <li>Mendorong kolaborasi dalam proyek teknologi terbuka.</li>
+                  <li>Literasi digital & inovasi berbasis kampus.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/></svg>
+              </div>
+              <h2 class="text-xl font-semibold text-text dark:text-bg font-heading">Tim Pengelola</h2>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 p-3 bg-accent/5 rounded-xl">
+                <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center shrink-0">
+                  <span class="text-accent font-bold text-sm">NN</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-text dark:text-bg text-sm">No Name</p>
+                  <p class="text-xs text-text-muted dark:text-bg/60">President No 1</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-3 bg-accent/5 rounded-xl">
+                <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center shrink-0">
+                  <span class="text-accent font-bold text-sm">OV</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-text dark:text-bg text-sm">Overlord</p>
+                  <p class="text-xs text-text-muted dark:text-bg/60">Gamer Legendary</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-3 bg-accent/5 rounded-xl">
+                <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center shrink-0">
+                  <span class="text-accent font-bold text-sm">MF</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-text dark:text-bg text-sm">Tanta</p>
+                  <p class="text-xs text-text-muted dark:text-bg/60">Ketua Panitia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kontak -->
+        <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 md:p-8 text-center shadow-sm">
+          <h2 class="text-xl font-semibold text-text dark:text-bg font-heading mb-3">Hubungi Kami</h2>
+          <p class="text-sm text-text-muted dark:text-bg/60 mb-4">Punya pertanyaan atau ingin berkontribusi? Temukan kami di:</p>
+          <div class="flex justify-center gap-4">
+            <a href="https://instagram.com/mipolmed" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-bg rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <a href="mailto:hmps.mi@polmed.ac.id" class="inline-flex items-center gap-2 px-5 py-2.5 bg-text dark:bg-bg text-bg dark:text-text rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer>
+      <div class="footer-logo">Tech<span>Blog</span></div>
+      <div class="footer-copy">© 2026 TechBlog MI · HMPS Manajemen Informatika · Polmed</div>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
