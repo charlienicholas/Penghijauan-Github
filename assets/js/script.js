@@ -26,9 +26,51 @@ if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && w
   document.documentElement.classList.remove("dark");
 }
 
+// Category filter pills
+const categoryPills = document.getElementById("category-pills");
+const artikelCards = document.querySelectorAll(".artikel-card");
+
+const categories = new Set();
+artikelCards.forEach((card) => {
+  card.querySelectorAll(".kategori span").forEach((s) => categories.add(s.textContent));
+});
+
+categories.forEach((cat) => {
+  const btn = document.createElement("button");
+  btn.textContent = cat;
+  btn.className = "px-4 py-1.5 rounded-lg text-sm font-heading font-semibold border border-accent/30 text-accent dark:text-bg dark:border-bg/30 cursor-pointer transition-all hover:bg-accent/10";
+  btn.dataset.category = cat;
+  btn.addEventListener("click", () => filterCategory(cat));
+  categoryPills.appendChild(btn);
+});
+
+const semuaBtn = document.createElement("button");
+semuaBtn.textContent = "Semua";
+semuaBtn.className = "px-4 py-1.5 rounded-lg text-sm font-heading font-semibold border border-accent/30 text-accent dark:text-bg dark:border-bg/30 cursor-pointer transition-all hover:bg-accent/10 bg-accent text-bg";
+semuaBtn.dataset.category = "all";
+semuaBtn.addEventListener("click", () => filterCategory("all"));
+categoryPills.prepend(semuaBtn);
+
+function filterCategory(cat) {
+  document.querySelectorAll("#category-pills button").forEach((b) => {
+    b.classList.remove("bg-accent", "text-bg");
+    b.classList.add("text-accent", "dark:text-bg", "dark:border-bg/30");
+  });
+
+  const active = cat === "all" ? semuaBtn : document.querySelector(`#category-pills button[data-category="${cat}"]`);
+  if (active) {
+    active.classList.remove("text-accent", "dark:text-bg", "dark:border-bg/30");
+    active.classList.add("bg-accent", "text-bg");
+  }
+
+  artikelCards.forEach((card) => {
+    const cats = [...card.querySelectorAll(".kategori span")].map((s) => s.textContent);
+    card.classList.toggle("hidden", cat !== "all" && !cats.includes(cat));
+  });
+}
+
 // Filter artikel berdasarkan input search
 const searchInput = document.getElementById("search-input");
-const artikelCards = document.querySelectorAll(".artikel-card");
 
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase().trim();
