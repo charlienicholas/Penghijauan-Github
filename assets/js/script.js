@@ -5,6 +5,17 @@ AOS.init({
   offset: 80,
 });
 
+// Loading Spinner
+const loader = document.getElementById("loader");
+if (loader) {
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      loader.classList.add("opacity-0", "pointer-events-none");
+      setTimeout(() => loader.remove(), 500);
+    }, 500);
+  });
+}
+
 // Reading Progress Bar
 const progressBar = document.getElementById("progress-bar");
 
@@ -40,28 +51,32 @@ if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && w
 const categoryPills = document.getElementById("category-pills");
 const artikelCards = document.querySelectorAll(".artikel-card");
 
-const categories = new Set();
-artikelCards.forEach((card) => {
-  card.querySelectorAll(".kategori span").forEach((s) => categories.add(s.textContent));
-});
+let semuaBtn;
+if (categoryPills && artikelCards.length) {
+  const categories = new Set();
+  artikelCards.forEach((card) => {
+    card.querySelectorAll(".kategori span").forEach((s) => categories.add(s.textContent));
+  });
 
-categories.forEach((cat) => {
-  const btn = document.createElement("button");
-  btn.textContent = cat;
-  btn.className = "px-4 py-1.5 rounded-lg text-sm font-heading font-semibold border border-accent/30 text-accent dark:text-bg dark:border-bg/30 cursor-pointer transition-all hover:bg-accent/10";
-  btn.dataset.category = cat;
-  btn.addEventListener("click", () => filterCategory(cat));
-  categoryPills.appendChild(btn);
-});
+  categories.forEach((cat) => {
+    const btn = document.createElement("button");
+    btn.textContent = cat;
+    btn.className = "px-4 py-1.5 rounded-lg text-sm font-heading font-semibold border border-accent/30 text-accent dark:text-bg dark:border-bg/30 cursor-pointer transition-all hover:bg-accent/10";
+    btn.dataset.category = cat;
+    btn.addEventListener("click", () => filterCategory(cat));
+    categoryPills.appendChild(btn);
+  });
 
-const semuaBtn = document.createElement("button");
-semuaBtn.textContent = "Semua";
-semuaBtn.className = "px-4 py-1.5 rounded-lg text-sm font-heading font-semibold border border-accent/30 text-accent dark:text-bg dark:border-bg/30 cursor-pointer transition-all hover:bg-accent/10 bg-accent text-bg";
-semuaBtn.dataset.category = "all";
-semuaBtn.addEventListener("click", () => filterCategory("all"));
-categoryPills.prepend(semuaBtn);
+  semuaBtn = document.createElement("button");
+  semuaBtn.textContent = "Semua";
+  semuaBtn.className = "px-4 py-1.5 rounded-lg text-sm font-heading font-semibold border border-accent/30 text-accent dark:text-bg dark:border-bg/30 cursor-pointer transition-all hover:bg-accent/10 bg-accent text-bg";
+  semuaBtn.dataset.category = "all";
+  semuaBtn.addEventListener("click", () => filterCategory("all"));
+  categoryPills.prepend(semuaBtn);
+}
 
 function filterCategory(cat) {
+  if (!categoryPills) return;
   document.querySelectorAll("#category-pills button").forEach((b) => {
     b.classList.remove("bg-accent", "text-bg");
     b.classList.add("text-accent", "dark:text-bg", "dark:border-bg/30");
@@ -87,6 +102,7 @@ const toastMsg = document.getElementById("toast-message");
 let toastTimer;
 
 function showToast(msg) {
+  if (!toast || !toastMsg) return;
   clearTimeout(toastTimer);
   toastMsg.textContent = msg;
   toast.classList.remove("opacity-0", "invisible", "-translate-y-4");
@@ -98,6 +114,7 @@ function showToast(msg) {
 }
 
 function checkNoResults() {
+  if (!artikelCards.length) return;
   const visible = [...artikelCards].filter((c) => !c.classList.contains("hidden"));
   if (visible.length === 0) showToast("Tidak ada artikel yang cocok");
 }
@@ -105,7 +122,7 @@ function checkNoResults() {
 // Filter artikel berdasarkan input search
 const searchInput = document.getElementById("search-input");
 
-searchInput.addEventListener("input", () => {
+if (searchInput) searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase().trim();
 
   artikelCards.forEach((card) => {
@@ -121,19 +138,21 @@ searchInput.addEventListener("input", () => {
 // Back to Top
 const backToTop = document.getElementById("back-to-top");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    backToTop.classList.remove("opacity-0", "invisible");
-    backToTop.classList.add("opacity-100", "visible");
-  } else {
-    backToTop.classList.add("opacity-0", "invisible");
-    backToTop.classList.remove("opacity-100", "visible");
-  }
-});
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.remove("opacity-0", "invisible");
+      backToTop.classList.add("opacity-100", "visible");
+    } else {
+      backToTop.classList.add("opacity-0", "invisible");
+      backToTop.classList.remove("opacity-100", "visible");
+    }
+  });
 
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 // Event Listener Klik
 btnTheme.addEventListener("click", () => {

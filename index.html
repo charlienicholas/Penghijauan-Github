@@ -16,7 +16,13 @@
   </head>
   <body class="transition-colors duration-500">
     <!-- Reading Progress Bar -->
-    <div id="progress-bar" class="fixed top-0 left-0 z-[9999] h-1 bg-accent transition-all duration-100 w-0"></div>
+    <div id="progress-bar" class="fixed top-0 left-0 z-9999 h-1 bg-accent transition-all duration-100 w-0"></div>
+
+    <!-- Loading Spinner -->
+    <div id="loader" class="fixed inset-0 z-[9999] bg-bg dark:bg-slate-900 flex items-center justify-center transition-opacity duration-500">
+      <div class="w-8 h-8 border-2 border-border dark:border-slate-600 border-t-accent dark:border-t-indigo-400 rounded-full animate-spin"></div>
+    </div>
+
     <!-- ============================================
        NAVBAR
   ============================================ -->
