@@ -14,5 +14,12 @@
     @apply text-indigo-600 font-bold translate-x-2;
 }
 
+.artikel-card.hidden {
+    display: none;
+}
+
+.artikel-card {
+    transition: opacity 0.3s, transform 0.3s;
+}
 
 @custom-variant dark (&:where(.dark, .dark *));

@@ -26,6 +26,21 @@ if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && w
   document.documentElement.classList.remove("dark");
 }
 
+// Filter artikel berdasarkan input search
+const searchInput = document.getElementById("search-input");
+const artikelCards = document.querySelectorAll(".artikel-card");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase().trim();
+
+  artikelCards.forEach((card) => {
+    const title = card.querySelector("h1").textContent.toLowerCase();
+    const categories = [...card.querySelectorAll(".kategori span")].map((s) => s.textContent.toLowerCase());
+    const match = title.includes(query) || categories.some((cat) => cat.includes(query));
+    card.classList.toggle("hidden", !match && query !== "");
+  });
+});
+
 // Event Listener Klik
 btnTheme.addEventListener("click", () => {
   if (document.documentElement.classList.contains("dark")) {

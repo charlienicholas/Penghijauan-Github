@@ -68,6 +68,11 @@
       </h1>
       <p class="hero-desc" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Selamat datang di TechBlog MI — ruang bagi mahasiswa Manajemen Informatika untuk berbagi artikel, tips, dan wawasan seputar dunia teknologi.</p>
       <a href="#artikel" class="hero-btn" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Mulai Membaca →</a>
+
+      <div class="flex items-center gap-3 max-w-100 mt-8 px-4 py-2.5 border border-border rounded-lg focus-within:border-accent focus-within:shadow-[0_0_0_2px_color-mix(in_srgb,var(--color-accent)_20%,transparent)] transition-all" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+        <svg class="w-[1.1rem] h-[1.1rem] text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" id="search-input" class="flex-1 border-none outline-none bg-transparent text-text dark:text-bg font-mono text-sm placeholder:text-text-muted" placeholder="Cari artikel atau kategori..." autocomplete="off" />
+      </div>
     </section>
 
     <!-- ============================================
@@ -89,8 +94,8 @@
       <h1 class="text-text dark:text-bg transition-colors duration-300 text-4xl font-bold font-heading" data-aos="fade-up">Artikel <span class="text-accent">Terbaru</span></h1>
       <div class="w-16 h-1 bg-accent mt-1 mb-8 rounded-4xl" data-aos="fade-up" data-aos-delay="50"></div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="artikel-grid">
+        <div class="artikel-card flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
           <h1 class="text-xl font-black mb-1 font-heading">Pengenalan HTML5 Semantic</h1>
           <h4 class="text-sm">15 Juni 2026</h4>
           <div class="kategori flex gap-2 mb-4 mt-6 -ml-1 text-sm font-heading font-semibold text-bg">
@@ -101,7 +106,7 @@
           <a href="#" class="text-accent dark:text-bg hover:underline">Baca Selengkapnya →</a>
         </div>
 
-        <div class="flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="artikel-card flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
           <h1 class="text-xl font-black mb-1 font-heading">CSS Flexbox vs Grid</h1>
           <h4 class="text-sm">10 Juni 2026</h4>
           <div class="kategori flex gap-2 mb-4 mt-6 -ml-1 text-sm font-heading font-semibold text-bg">
@@ -112,7 +117,7 @@
           <a href="#" class="text-accent dark:text-bg hover:underline">Baca Selengkapnya →</a>
         </div>
 
-        <div class="flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="artikel-card flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
           <h1 class="text-xl font-black mb-1 font-heading">Dasar JavaScript untuk Pemula</h1>
           <h4 class="text-sm">5 Juni 2026</h4>
           <div class="kategori flex gap-2 mb-4 mt-6 -ml-1 text-sm font-heading font-semibold text-bg">
@@ -123,7 +128,7 @@
           <a href="#" class="text-accent dark:text-bg hover:underline">Baca Selengkapnya →</a>
         </div>
 
-        <div class="flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="artikel-card flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="100">
           <h1 class="text-xl font-black mb-1 font-heading">Version Control dengan Git</h1>
           <h4 class="text-sm">28 Mei 2026</h4>
           <div class="kategori flex gap-2 mb-4 mt-6 -ml-1 text-sm font-heading font-semibold text-bg">
@@ -134,7 +139,7 @@
           <a href="#" class="text-accent dark:text-bg hover:underline">Baca Selengkapnya →</a>
         </div>
 
-        <div class="flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="artikel-card flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="200">
           <h1 class="text-xl font-black mb-1 font-heading">Responsive Design dengan Tailwind CSS</h1>
           <h4 class="text-sm">20 Mei 2026</h4>
           <div class="kategori flex gap-2 mb-4 mt-6 -ml-1 text-sm font-heading font-semibold text-bg">
@@ -145,7 +150,7 @@
           <a href="#" class="text-accent dark:text-bg hover:underline">Baca Selengkapnya →</a>
         </div>
 
-        <div class="flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="artikel-card flex flex-col bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-md" data-aos="fade-up" data-aos-delay="300">
           <h1 class="text-xl font-black mb-1 font-heading">Mengenal REST API & JSON</h1>
           <h4 class="text-sm">12 Mei 2026</h4>
           <div class="kategori flex gap-2 mb-4 mt-6 -ml-1 text-sm font-heading font-semibold text-bg">
