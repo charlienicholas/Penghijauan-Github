@@ -173,6 +173,12 @@
       <div class="footer-copy">© 2026 TechBlog MI · HMPS Manajemen Informatika · Polmed</div>
     </footer>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-24 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-text dark:bg-slate-700 text-bg dark:text-bg shadow-2xl opacity-0 invisible transition-all duration-300 -translate-y-4 text-sm font-heading font-semibold border border-accent/20">
+      <svg class="w-5 h-5 shrink-0 text-accent dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span id="toast-message"></span>
+    </div>
+
     <!-- Back to Top -->
     <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-accent text-bg shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:opacity-90 cursor-pointer">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>

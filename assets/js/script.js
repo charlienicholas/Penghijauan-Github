@@ -67,6 +67,29 @@ function filterCategory(cat) {
     const cats = [...card.querySelectorAll(".kategori span")].map((s) => s.textContent);
     card.classList.toggle("hidden", cat !== "all" && !cats.includes(cat));
   });
+
+  checkNoResults();
+}
+
+// Toast notification
+const toast = document.getElementById("toast");
+const toastMsg = document.getElementById("toast-message");
+let toastTimer;
+
+function showToast(msg) {
+  clearTimeout(toastTimer);
+  toastMsg.textContent = msg;
+  toast.classList.remove("opacity-0", "invisible", "-translate-y-4");
+  toast.classList.add("opacity-100", "visible", "translate-y-0");
+  toastTimer = setTimeout(() => {
+    toast.classList.add("opacity-0", "invisible", "-translate-y-4");
+    toast.classList.remove("opacity-100", "visible", "translate-y-0");
+  }, 3000);
+}
+
+function checkNoResults() {
+  const visible = [...artikelCards].filter((c) => !c.classList.contains("hidden"));
+  if (visible.length === 0) showToast("Tidak ada artikel yang cocok");
 }
 
 // Filter artikel berdasarkan input search
@@ -81,6 +104,8 @@ searchInput.addEventListener("input", () => {
     const match = title.includes(query) || categories.some((cat) => cat.includes(query));
     card.classList.toggle("hidden", !match && query !== "");
   });
+
+  checkNoResults();
 });
 
 // Back to Top
