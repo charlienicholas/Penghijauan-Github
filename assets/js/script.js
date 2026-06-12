@@ -5,6 +5,16 @@ AOS.init({
   offset: 80,
 });
 
+// Reading Progress Bar
+const progressBar = document.getElementById("progress-bar");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = progress + "%";
+});
+
 // Mobile Hamburger Menu Logic
 const sideMenu = document.getElementById("side-menu");
 const openBtn = document.getElementById("menu-open");
