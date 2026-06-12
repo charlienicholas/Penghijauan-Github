@@ -83,6 +83,23 @@ searchInput.addEventListener("input", () => {
   });
 });
 
+// Back to Top
+const backToTop = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.remove("opacity-0", "invisible");
+    backToTop.classList.add("opacity-100", "visible");
+  } else {
+    backToTop.classList.add("opacity-0", "invisible");
+    backToTop.classList.remove("opacity-100", "visible");
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 // Event Listener Klik
 btnTheme.addEventListener("click", () => {
   if (document.documentElement.classList.contains("dark")) {
