@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- css vanila -->
     <link rel="stylesheet" href="../css/style.css" />
 
@@ -60,12 +62,12 @@
     <!-- ============================================ -->
     <section id="about" class="px-[5vw] w-full bg-text-muted/20 dark:bg-slate-800 py-24">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-text dark:text-bg transition-colors duration-300 text-4xl md:text-5xl font-bold font-heading text-center">Tentang <span class="text-accent">TechBlog MI</span></h1>
-        <div class="w-16 h-1 bg-accent mt-3 mb-4 rounded-4xl mx-auto"></div>
-        <p class="text-center text-text-muted dark:text-bg/60 text-sm max-w-lg mx-auto mb-14">Bersama menulis, berbagi, dan berkembang dalam satu wadah literasi digital kampus.</p>
+        <h1 class="text-text dark:text-bg transition-colors duration-300 text-4xl md:text-5xl font-bold font-heading text-center" data-aos="fade-up">Tentang <span class="text-accent">TechBlog MI</span></h1>
+        <div class="w-16 h-1 bg-accent mt-3 mb-4 rounded-4xl mx-auto" data-aos="fade-up" data-aos-delay="50"></div>
+        <p class="text-center text-text-muted dark:text-bg/60 text-sm max-w-lg mx-auto mb-14" data-aos="fade-up" data-aos-delay="100">Bersama menulis, berbagi, dan berkembang dalam satu wadah literasi digital kampus.</p>
 
         <!-- Stats -->
-        <div class="grid grid-cols-3 gap-4 mb-14">
+        <div class="grid grid-cols-3 gap-4 mb-14" data-aos="fade-up" data-aos-delay="150">
           <div class="text-center bg-bg dark:bg-slate-700 rounded-xl p-5 shadow-sm">
             <p class="text-3xl font-bold font-heading text-accent">6</p>
             <p class="text-xs text-text-muted dark:text-bg/60 mt-1">Artikel</p>
@@ -81,7 +83,7 @@
         </div>
 
         <!-- Deskripsi -->
-        <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 md:p-8 mb-8 shadow-sm">
+        <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 md:p-8 mb-8 shadow-sm" data-aos="fade-up">
           <p class="text-base text-text-muted dark:text-bg/60 leading-relaxed mb-4">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat et expedita sequi minima quos recusandae reiciendis error nisi quaerat. Veritatis fugiat, incidunt, perspiciatis quae labore quis, ea ut corrupti voluptates mollitia possimus? Animi nam temporibus hic tempora magni obcaecati expedita vero, autem, molestias labore architecto nesciunt ullam totam asperiores saepe!
           </p>
@@ -92,7 +94,7 @@
 
         <!-- Visi & Misi + Tim -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-sm">
+          <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
             <div class="flex items-center gap-3 mb-5">
               <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -115,7 +117,7 @@
             </div>
           </div>
 
-          <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-sm">
+          <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
             <div class="flex items-center gap-3 mb-5">
               <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/></svg>
@@ -155,7 +157,7 @@
         </div>
 
         <!-- Kontak -->
-        <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 md:p-8 text-center shadow-sm">
+        <div class="bg-bg dark:bg-slate-700 rounded-xl p-6 md:p-8 text-center shadow-sm" data-aos="fade-up">
           <h2 class="text-xl font-semibold text-text dark:text-bg font-heading mb-3">Hubungi Kami</h2>
           <p class="text-sm text-text-muted dark:text-bg/60 mb-4">Punya pertanyaan atau ingin berkontribusi? Temukan kami di:</p>
           <div class="flex justify-center gap-4">
@@ -179,6 +181,7 @@
       <div class="footer-logo">Tech<span>Blog</span></div>
       <div class="footer-copy">© 2026 TechBlog MI · HMPS Manajemen Informatika · Polmed</div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>

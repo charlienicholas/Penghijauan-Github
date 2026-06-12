@@ -1,3 +1,10 @@
+// AOS Init
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 80,
+});
+
 // Mobile Hamburger Menu Logic
 const sideMenu = document.getElementById("side-menu");
 const openBtn = document.getElementById("menu-open");
